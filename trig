@@ -1,0 +1,42 @@
+CREATE OR REPLACE TRIGGER bd
+BEFORE DELETE
+   ON pioneers
+   FOR EACH ROW
+
+
+   DECLARE id 
+DECLARE name 
+DECLARE org 
+DECLARE pname 
+DECLARE eid 
+
+
+BEGIN
+
+   SELECT Id INTO id FROM pioneers;
+   SELECT Name INTO name FROM pioneers;
+   SELECT Organization INTO org FROM pioneers;
+   SELECT Project_name INTO pname FROM pioneers;
+   SELECT E_Id INTO eid FROM pioneers;
+
+  
+   INSERT INTO deleted1
+   ( Id, 
+   	 Name,
+   	 Organization,
+   	 Project_name,
+   	 E_Id )
+   VALUES
+   ( id,
+   	 name,
+   	 org,
+   	 pname,
+   	 eid );
+
+END;
+
+/
+
+
+
+

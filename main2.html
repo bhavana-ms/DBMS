@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+    position: relative;
+    width: 20%;
+}
+
+.image {
+  opacity: 1;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.left img{
+  margin: 15px;
+  border: 2px solid black;
+  width: 80%;
+  
+}
+
+.left{
+  width: 20%;
+  padding: 15px;
+  display: block;
+  float: left;
+  background: #e67e22;
+  height: 650px;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Fade in a Box</h2>
+
+<div class="container">
+  <img src="sun.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">Water Energy</div>
+  </div>
+</div>
+<aside class = "left">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ultimate_Frisbee%2C_Jul_2009_-_19.jpg" alt="Creative Common Ultimate Photo" title="By Ed Yourdon [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons"/> 
+
+     <img alt="Ultimate Frisbee Colorado Cup 2005" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Ultimate_Frisbee_Colorado_Cup_2005.jpg/512px-Ultimate_Frisbee_Colorado_Cup_2005.jpg"/>
+
+
+      <img src="https://farm4.staticflickr.com/3948/15409853738_7dbfbfbac7_k.jpg"  alt="Ultimate Frisbee">
+    </aside>
+  
+</body>
+</html>
